@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ryan Li - Mechatronics engineering student specializing in robotics, embedded systems, CAD, and clean code.">
+    <title>Ryan Li | Mechatronics Engineering Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <!-- Sticky Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Ryan Li</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="#" class="btn btn-outline btn-sm" aria-label="Download Resume">Resume</a>
+                    <a href="https://github.com/ryanli222" class="btn btn-icon" aria-label="GitHub Profile"
+                        target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-headline pop-in">Mechatronics engineering student building practical hardware +
+                    software.</h1>
+                <p class="hero-subheadline pop-in">Robotics, embedded systems, CAD, and clean code — focused on
+                    measurable results.</p>
+                <div class="hero-buttons pop-in">
+                    <a href="#" class="btn btn-primary">View Resume</a>
+                    <a href="mailto:ryan@example.com" class="btn btn-secondary">Email Me</a>
+                </div>
+                <div class="hero-chips pop-in">
+                    <span class="chip">C++ / Python</span>
+                    <span class="chip">ESP32 + Raspberry Pi</span>
+                    <span class="chip">SolidWorks</span>
+                    <span class="chip">Robotics Leadership</span>
+                </div>
+            </div>
+            <div class="hero-3d pop-in">
+                <canvas id="hero3d"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title pop-in" id="about-title">About</h2>
+            <div class="about-content fade-in">
+                <div class="about-text">
+                    <p>I'm a first-year Mechatronics Engineering student at the University of Waterloo with a passion
+                        for building systems that solve real problems. I focus on creating reproducible, well-documented
+                        projects that bridge hardware and software.</p>
+                    <ul class="about-bullets">
+                        <li>UW Mechatronics Engineering, first year</li>
+                        <li>Builds IoT + robotics projects from concept to completion</li>
+                        <li>Emphasizes reproducibility and clear documentation</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder image-placeholder--square">
+                        <span class="placeholder-text">Add headshot or workspace photo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section section--alt" id="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project A: HomePOD -->
+                <article class="project-card fade-in" data-project="homepod">
+                    <div class="project-thumbnail">
+                        <div class="image-placeholder">
+                            <span class="placeholder-text">Add dashboard screenshot or sensor photo</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">HomePOD: Distributed IoT Sensor Network</h3>
+                        <p class="project-oneliner">ESP32 sensor nodes stream readings over Wi-Fi to a Raspberry Pi hub.
+                        </p>
+                        <ul class="project-bullets">
+                            <li>Built ESP32 nodes and a Pi hub for environmental monitoring</li>
+                            <li>Developed a Python/Flask dashboard + JSON logging/API</li>
+                            <li>Designed SolidWorks enclosures for sensors + hub</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">ESP32</span>
+                            <span class="tag">Raspberry Pi</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">Wi-Fi</span>
+                            <span class="tag">JSON API</span>
+                            <span class="tag">SolidWorks</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ryanli222/HomePOD" class="btn btn-sm btn-outline"
+                                target="_blank" rel="noopener">GitHub</a>
+                            <button class="btn btn-sm btn-primary project-expand" data-project="homepod">Expand</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project B: VEX IQ Drawing Robot -->
+                <article class="project-card fade-in" data-project="vexiq">
+                    <div class="project-thumbnail">
+                        <div class="image-placeholder">
+                            <span class="placeholder-text">Add robot photo</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">VEX IQ Drawing Robot (Gantry Printer)</h3>
+                        <p class="project-oneliner">XY gantry robot that draws reliably with controlled pen lift.</p>
+                        <ul class="project-bullets">
+                            <li>Designed/iterated mechanism for repeatable motion</li>
+                            <li>Implemented structured control logic and calibration/testing</li>
+                            <li>Improved reliability through iteration and constraints-based design</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">VEX IQ</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">Mechanism Design</span>
+                            <span class="tag">Testing</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="btn btn-sm btn-primary project-expand" data-project="vexiq">Expand</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project C: Care Navigation (Optional) -->
+                <article class="project-card fade-in" data-project="carenavigation">
+                    <div class="project-thumbnail">
+                        <div class="image-placeholder">
+                            <span class="placeholder-text">Add UI mockup screenshot</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">Prototype / In Progress</span>
+                        <h3 class="project-title">Care Navigation Web App</h3>
+                        <p class="project-oneliner">Non-diagnostic service matching + routing concept.</p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">PostGIS (concept)</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="btn btn-sm btn-primary project-expand"
+                                data-project="carenavigation">Expand</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2 class="section-title fade-in">Experience</h2>
+            <div class="experience-list">
+                <article class="experience-item fade-in">
+                    <div class="experience-content">
+                        <h3 class="experience-title">Assistant Volunteer Coordinator</h3>
+                        <ul class="experience-bullets">
+                            <li>Organized and ran events with <strong>100+ attendees</strong></li>
+                            <li>Raised <strong>$2.5k+</strong> through coordinated fundraising efforts</li>
+                            <li>Distributed <strong>2000+ kg</strong> of food through community programs</li>
+                            <li>Managed volunteer logistics and event coordination</li>
+                        </ul>
+                    </div>
+                    <div class="experience-image">
+                        <div class="image-placeholder image-placeholder--small">
+                            <span class="placeholder-text">Add event photo (optional)</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section--alt" id="skills">
+        <div class="container">
+            <h2 class="section-title fade-in">Skills</h2>
+            <div class="skills-grid fade-in">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Languages</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">C++</span>
+                        <span class="skill-item">Python</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Hardware / Embedded</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">ESP32</span>
+                        <span class="skill-item">Raspberry Pi</span>
+                        <span class="skill-item">Sensors</span>
+                        <span class="skill-item">I2C Basics</span>
+                        <span class="skill-item">ADC Basics</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">CAD / Build</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">SolidWorks</span>
+                        <span class="skill-item">3D Printing</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Tools</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Git / GitHub</span>
+                        <span class="skill-item">Linux</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Contact</h2>
+            <div class="contact-content fade-in">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                <div class="contact-links">
+                    <a href="mailto:ryan@example.com" class="contact-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        Email
+                    </a>
+                    <a href="https://linkedin.com/in/ryanli222" class="contact-link" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/ryanli222" class="contact-link" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub
+                    </a>
+                    <div class="contact-image">
+                        <div class="image-placeholder image-placeholder--small">
+                            <span class="placeholder-text">Add logo or QR code (optional)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Ryan Li</p>
+        </div>
+    </footer>
+
+    <!-- Project Modals -->
+    <div class="modal-overlay" id="modalOverlay">
+        <!-- HomePOD Modal -->
+        <div class="modal" id="modal-homepod" role="dialog" aria-modal="true" aria-labelledby="modal-homepod-title">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-content">
+                <div class="modal-gallery">
+                    <div class="image-placeholder">
+                        <span class="placeholder-text">ESP32 node photo</span>
+                    </div>
+                    <div class="image-placeholder">
+                        <span class="placeholder-text">Raspberry Pi hub photo</span>
+                    </div>
+                    <div class="image-placeholder">
+                        <span class="placeholder-text">Dashboard screenshot</span>
+                    </div>
+                    <div class="image-placeholder">
+                        <span class="placeholder-text">Enclosure CAD render</span>
+                    </div>
+                </div>
+                <div class="modal-details">
+                    <h2 id="modal-homepod-title">HomePOD: Distributed IoT Sensor Network</h2>
+                    <div class="modal-section">
+                        <h4>Outcome</h4>
+                        <p>A fully functional distributed sensor network capable of real-time environmental monitoring
+                            with a centralized dashboard.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h4>My Role</h4>
+                        <p>Sole developer — designed hardware integration, firmware, backend API, and frontend
+                            dashboard.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h4>Tech Stack</h4>
+                        <p>ESP32, Raspberry Pi, Python, Flask, Wi-Fi, JSON API, SolidWorks</p>
+                    </div>
+                    <div class="modal-section">
+                        <h4>Challenges</h4>
+                        <p>Ensured reliable Wi-Fi communication between multiple nodes; designed enclosures for sensor
+                            protection.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h4>Next Steps</h4>
+                        <p>Add more sensor types, implement data persistence with a database, and deploy to a local
+                            network.</p>
+                    </div>
+                    <div class="modal-links">
+                        <a href="https://github.com/ryanli222/HomePOD" class="btn btn-primary" target="_blank"
+                            rel="noopener">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VEX IQ Modal -->
+        <div class="modal" id="modal-vexiq" role="dialog" aria-modal="true" aria-labelledby="modal-vexiq-title">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-content">
+                <div class="modal-gallery">
+                    <div class="image-placeholder">
+                        <span class="placeholder-text">Full robot photo</span>
+                    </div>
+                    <div class="image-placeholder">
+                        <span class="placeholder-text">Close-up gantry</span>
+                    </div>
+                    <div class="image-placeholder">
+                        <span class="placeholder-text">Sample drawing output</span>
+                    </div>
+                    <div class="image-placeholder">
+                        <span class="placeholder-text">CAD screenshot (optional)</span>
+                    </div>
+                </div>
+                <div class="modal-details">
+                    <h2 id="modal-vexiq-title">VEX IQ Drawing Robot (Gantry Printer)</h2>
+                    <div class="modal-section">
+                        <h4>Outcome</h4>
+                        <p>A reliable XY gantry robot that produces consistent drawings with precise pen control.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h4>My Role</h4>
+                        <p>Lead designer — mechanism design, control logic implementation, and iterative testing.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h4>Tech Stack</h4>
+                        <p>VEX IQ, C++, Mechanism Design, Testing Methodology</p>
+                    </div>
+                    <div class="modal-section">
+                        <h4>Challenges</h4>
+                        <p>Achieving repeatable motion with VEX IQ components; calibrating pen lift mechanism for
+                            consistent contact.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h4>Next Steps</h4>
+                        <p>Add support for more complex shapes and explore image-to-path conversion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Care Navigation Modal -->
+        <div class="modal" id="modal-carenavigation" role="dialog" aria-modal="true"
+            aria-labelledby="modal-carenavigation-title">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-content">
+                <div class="modal-gallery">
+                    <div class="image-placeholder">
+                        <span class="placeholder-text">Figma screen 1</span>
+                    </div>
+                    <div class="image-placeholder">
+                        <span class="placeholder-text">Figma screen 2</span>
+                    </div>
+                    <div class="image-placeholder">
+                        <span class="placeholder-text">Flow diagram image</span>
+                    </div>
+                </div>
+                <div class="modal-details">
+                    <h2 id="modal-carenavigation-title">Care Navigation Web App</h2>
+                    <span class="project-badge project-badge--large">Prototype / In Progress</span>
+                    <div class="modal-section">
+                        <h4>Concept</h4>
+                        <p>A non-diagnostic service matching and routing concept designed to connect users with
+                            appropriate care resources.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h4>Tech Stack (Planned)</h4>
+                        <p>Next.js, TypeScript, PostGIS for geographic routing</p>
+                    </div>
+                    <div class="modal-section">
+                        <h4>Status / Next Steps</h4>
+                        <p>Currently in prototype phase. Next: finalize user flows, build MVP routing logic, and conduct
+                            user testing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
