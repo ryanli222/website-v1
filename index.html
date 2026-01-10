@@ -31,7 +31,7 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="nav-buttons">
-                    <a href="#" class="btn btn-outline btn-sm" aria-label="Download Resume">Resume</a>
+                    <button class="btn btn-outline btn-sm resume-btn" aria-label="View Resume">Resume</button>
                     <a href="https://github.com/ryanli222" class="btn btn-icon" aria-label="GitHub Profile"
                         target="_blank" rel="noopener">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -53,7 +53,7 @@
                 <p class="hero-subheadline pop-in">Robotics, embedded systems, CAD, and clean code — focused on
                     measurable results.</p>
                 <div class="hero-buttons pop-in">
-                    <a href="#" class="btn btn-primary">View Resume</a>
+                    <button class="btn btn-primary resume-btn">View Resume</button>
                     <a href="mailto:ryan@example.com" class="btn btn-secondary">Email Me</a>
                 </div>
                 <div class="hero-chips pop-in">
@@ -447,6 +447,15 @@
     <div class="lightbox" id="lightbox">
         <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
         <img src="" alt="" class="lightbox-img" id="lightboxImg">
+    </div>
+
+    <!-- Resume Modal -->
+    <div class="resume-modal" id="resumeModal">
+        <div class="resume-modal-content">
+            <button class="resume-modal-close" aria-label="Close resume">&times;</button>
+            <iframe src="resume.pdf" class="resume-iframe" title="Resume"></iframe>
+            <a href="resume.pdf" download class="btn btn-primary resume-download">Download PDF</a>
+        </div>
     </div>
 
     <script src="script.js"></script>

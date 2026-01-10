@@ -408,3 +408,45 @@ document.querySelectorAll('.hero .fade-in').forEach(el => {
         }
     });
 })();
+
+// ===== Resume Modal Functionality =====
+(function initResumeModal() {
+    const resumeModal = document.getElementById('resumeModal');
+    const resumeBtns = document.querySelectorAll('.resume-btn');
+    const resumeClose = document.querySelector('.resume-modal-close');
+
+    if (!resumeModal) return;
+
+    // Open modal on button click
+    resumeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            resumeModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close modal
+    function closeResumeModal() {
+        resumeModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Close on button click
+    if (resumeClose) {
+        resumeClose.addEventListener('click', closeResumeModal);
+    }
+
+    // Close on background click
+    resumeModal.addEventListener('click', (e) => {
+        if (e.target === resumeModal) {
+            closeResumeModal();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && resumeModal.classList.contains('active')) {
+            closeResumeModal();
+        }
+    });
+})();
