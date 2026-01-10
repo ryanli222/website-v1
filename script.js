@@ -450,3 +450,43 @@ document.querySelectorAll('.hero .fade-in').forEach(el => {
         }
     });
 })();
+
+// ===== UWFE Parts Modal Functionality =====
+(function initUwfeModal() {
+    const uwfeModal = document.getElementById('uwfeModal');
+    const uwfeBtn = document.querySelector('.uwfe-parts-btn');
+    const uwfeClose = document.querySelector('.uwfe-modal-close');
+
+    if (!uwfeModal || !uwfeBtn) return;
+
+    // Open modal on button click
+    uwfeBtn.addEventListener('click', () => {
+        uwfeModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    // Close modal
+    function closeUwfeModal() {
+        uwfeModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Close on button click
+    if (uwfeClose) {
+        uwfeClose.addEventListener('click', closeUwfeModal);
+    }
+
+    // Close on background click
+    uwfeModal.addEventListener('click', (e) => {
+        if (e.target === uwfeModal) {
+            closeUwfeModal();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && uwfeModal.classList.contains('active')) {
+            closeUwfeModal();
+        }
+    });
+})();
