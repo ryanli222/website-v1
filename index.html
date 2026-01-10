@@ -314,16 +314,24 @@
         <div class="modal" id="modal-homepod" role="dialog" aria-modal="true" aria-labelledby="modal-homepod-title">
             <button class="modal-close" aria-label="Close modal">&times;</button>
             <div class="modal-content">
-                <div class="modal-gallery">
-                    <img src="images/homepod-dashboard.png"
+                <div class="modal-gallery modal-gallery--expanded">
+                    <img src="images/homepod-dashboard.png" class="gallery-img"
                         alt="HomeHUB main dashboard with weather widget, to-do list, and room cards" loading="lazy">
-                    <img src="images/homepod-bedroom.png"
+                    <img src="images/homepod-bedroom.png" class="gallery-img"
                         alt="HomeHUB bedroom room detail view with temperature, humidity, audio, and light levels"
                         loading="lazy">
-                    <img src="images/homepod-weather.png" alt="HomeHUB weather detail view with 5-day forecast"
-                        loading="lazy">
-                    <img src="images/homepod-todolist.png" alt="HomeHUB to-do list feature with task management"
-                        loading="lazy">
+                    <img src="images/homepod-weather.png" class="gallery-img"
+                        alt="HomeHUB weather detail view with 5-day forecast" loading="lazy">
+                    <img src="images/homepod-todolist.png" class="gallery-img"
+                        alt="HomeHUB to-do list feature with task management" loading="lazy">
+                    <img src="images/homepod-touchscreen-dashboard.png" class="gallery-img"
+                        alt="HomeHUB running on Raspberry Pi touchscreen showing dashboard" loading="lazy">
+                    <img src="images/homepod-touchscreen-weather.jpg" class="gallery-img"
+                        alt="HomeHUB running on Raspberry Pi touchscreen showing weather" loading="lazy">
+                    <img src="images/homepod-hub-internal.jpg" class="gallery-img"
+                        alt="HomePOD hub internal view with ESP32, breadboard, and wiring" loading="lazy">
+                    <img src="images/homepod-enclosure.jpg" class="gallery-img"
+                        alt="HomePOD 3D printed enclosure exterior" loading="lazy">
                 </div>
                 <div class="modal-details">
                     <h2 id="modal-homepod-title">HomePOD: Distributed IoT Sensor Network</h2>
@@ -440,6 +448,12 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Lightbox for expanded images -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <img src="" alt="" class="lightbox-img" id="lightboxImg">
     </div>
 
     <script src="script.js"></script>

@@ -360,3 +360,51 @@ document.querySelectorAll('.hero .fade-in').forEach(el => {
     });
 })();
 
+// ===== Lightbox Functionality =====
+(function initLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const galleryImages = document.querySelectorAll('.gallery-img');
+
+    if (!lightbox || !lightboxImg) return;
+
+    // Open lightbox when clicking a gallery image
+    galleryImages.forEach(img => {
+        img.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent modal from closing
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close lightbox
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        // Only restore scroll if no modal is open
+        if (!modalOverlay.classList.contains('active')) {
+            document.body.style.overflow = '';
+        }
+    }
+
+    // Close on button click
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', closeLightbox);
+    }
+
+    // Close on background click
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+})();
