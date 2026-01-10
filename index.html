@@ -155,25 +155,26 @@
                     </div>
                 </article>
 
-                <!-- Project C: Care Navigation (Optional) -->
-                <article class="project-card fade-in" data-project="carenavigation">
+                <!-- Project C: Raspberry Pi Smart Doorbell -->
+                <article class="project-card fade-in" data-project="doorbell">
                     <div class="project-thumbnail">
                         <div class="image-placeholder">
-                            <span class="placeholder-text">Add UI mockup screenshot</span>
+                            <span class="placeholder-text">Add doorbell photo</span>
                         </div>
                     </div>
                     <div class="project-content">
-                        <span class="project-badge">Prototype / In Progress</span>
-                        <h3 class="project-title">Care Navigation Web App</h3>
-                        <p class="project-oneliner">Non-diagnostic service matching + routing concept.</p>
+                        <span class="project-badge">In Progress</span>
+                        <h3 class="project-title">Raspberry Pi Smart Doorbell</h3>
+                        <p class="project-oneliner">IoT doorbell with camera, notifications, and two-way audio.</p>
                         <div class="project-tags">
-                            <span class="tag">Next.js</span>
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">PostGIS (concept)</span>
+                            <span class="tag">Raspberry Pi</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Camera</span>
+                            <span class="tag">IoT</span>
                         </div>
                         <div class="project-links">
                             <button class="btn btn-sm btn-primary project-expand"
-                                data-project="carenavigation">Expand</button>
+                                data-project="doorbell">Expand</button>
                         </div>
                     </div>
                 </article>
@@ -188,12 +189,16 @@
             <div class="experience-list">
                 <article class="experience-item fade-in">
                     <div class="experience-content">
-                        <h3 class="experience-title">Suspension Team Member — UW Formula Electric</h3>
+                        <div class="experience-header">
+                            <img src="images/uwfe-logo.png" alt="UW Formula Electric Logo" class="experience-logo">
+                            <h3 class="experience-title">Suspension Team Member — UW Formula Electric</h3>
+                        </div>
                         <ul class="experience-bullets">
-                            <li>Designed and iterated suspension geometry components in <strong>SolidWorks</strong></li>
-                            <li>Performed stress analysis and FEA simulations to validate designs</li>
-                            <li>Collaborated with team members on integration with chassis and drivetrain</li>
-                            <li>Contributed to building a competition-ready electric formula race car</li>
+                            <li>Manufactured <strong>20+ parts</strong> of suspension hardware (suspension plate,
+                                spacers, tubes, plugs) using manual mills and lathes while following safe shop practices
+                            </li>
+                            <li>Interpreted technical drawings (dimensions, fits/tolerances) to meet tight tolerances up
+                                to <strong>±0.05 mm</strong>, perform in-process checks and final inspection</li>
                         </ul>
                         <button class="btn btn-sm btn-primary uwfe-parts-btn">View Parts I Made</button>
                     </div>
@@ -285,11 +290,6 @@
                         </svg>
                         GitHub
                     </a>
-                    <div class="contact-image">
-                        <div class="image-placeholder image-placeholder--small">
-                            <span class="placeholder-text">Add logo or QR code (optional)</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -400,38 +400,34 @@
             </div>
         </div>
 
-        <!-- Care Navigation Modal -->
-        <div class="modal" id="modal-carenavigation" role="dialog" aria-modal="true"
-            aria-labelledby="modal-carenavigation-title">
+        <!-- Doorbell Modal -->
+        <div class="modal" id="modal-doorbell" role="dialog" aria-modal="true" aria-labelledby="modal-doorbell-title">
             <button class="modal-close" aria-label="Close modal">&times;</button>
             <div class="modal-content">
                 <div class="modal-gallery">
                     <div class="image-placeholder">
-                        <span class="placeholder-text">Figma screen 1</span>
+                        <span class="placeholder-text">Doorbell photo</span>
                     </div>
                     <div class="image-placeholder">
-                        <span class="placeholder-text">Figma screen 2</span>
-                    </div>
-                    <div class="image-placeholder">
-                        <span class="placeholder-text">Flow diagram image</span>
+                        <span class="placeholder-text">Circuit diagram</span>
                     </div>
                 </div>
                 <div class="modal-details">
-                    <h2 id="modal-carenavigation-title">Care Navigation Web App</h2>
-                    <span class="project-badge project-badge--large">Prototype / In Progress</span>
+                    <h2 id="modal-doorbell-title">Raspberry Pi Smart Doorbell</h2>
+                    <span class="project-badge project-badge--large">In Progress</span>
                     <div class="modal-section">
                         <h4>Concept</h4>
-                        <p>A non-diagnostic service matching and routing concept designed to connect users with
-                            appropriate care resources.</p>
+                        <p>A smart doorbell system using Raspberry Pi with camera, motion detection, mobile
+                            notifications, and two-way audio communication.</p>
                     </div>
                     <div class="modal-section">
-                        <h4>Tech Stack (Planned)</h4>
-                        <p>Next.js, TypeScript, PostGIS for geographic routing</p>
+                        <h4>Tech Stack</h4>
+                        <p>Raspberry Pi, Python, Camera Module, Push Notifications</p>
                     </div>
                     <div class="modal-section">
                         <h4>Status / Next Steps</h4>
-                        <p>Currently in prototype phase. Next: finalize user flows, build MVP routing logic, and conduct
-                            user testing.</p>
+                        <p>Currently in development. Next: complete hardware assembly and implement notification system.
+                        </p>
                     </div>
                 </div>
             </div>

@@ -689,6 +689,23 @@ h4 {
     margin-bottom: var(--spacing-md);
 }
 
+.experience-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.experience-header .experience-title {
+    margin-bottom: 0;
+}
+
+.experience-logo {
+    width: 120px;
+    height: auto;
+    border-radius: var(--border-radius-sm);
+}
+
 .experience-bullets {
     list-style: disc;
     padding-left: var(--spacing-xl);
