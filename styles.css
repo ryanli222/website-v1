@@ -501,6 +501,14 @@ h4 {
     max-width: 250px;
 }
 
+.headshot-img {
+    width: 100%;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
 @media (min-width: 768px) {
     .about-content {
         flex-direction: row;
