@@ -155,22 +155,30 @@
                     </div>
                 </article>
 
-                <!-- Project C: Raspberry Pi Smart Doorbell -->
+                <!-- Project C: Smart Doorcam -->
                 <article class="project-card fade-in" data-project="doorbell">
                     <div class="project-thumbnail">
-                        <div class="image-placeholder">
-                            <span class="placeholder-text">Add doorbell photo</span>
-                        </div>
+                        <img src="images/doorcam-backend.png"
+                            alt="Smart Doorcam backend showing Docker containers and API logs" loading="lazy">
                     </div>
                     <div class="project-content">
                         <span class="project-badge">In Progress</span>
-                        <h3 class="project-title">Raspberry Pi Smart Doorbell</h3>
-                        <p class="project-oneliner">IoT doorbell with camera, notifications, and two-way audio.</p>
+                        <h3 class="project-title">Smart Doorcam</h3>
+                        <p class="project-oneliner">IoT security camera with live streaming, snapshot capture, and
+                            two-way audio.</p>
+                        <ul class="project-bullets">
+                            <li>Built FastAPI backend with PostgreSQL for event storage and MinIO for snapshots</li>
+                            <li>Implemented OpenCV-based video streaming on Raspberry Pi</li>
+                            <li>Containerized services with Docker and exposed via ngrok</li>
+                        </ul>
                         <div class="project-tags">
                             <span class="tag">Raspberry Pi</span>
                             <span class="tag">Python</span>
-                            <span class="tag">Camera</span>
-                            <span class="tag">IoT</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">ngrok</span>
                         </div>
                         <div class="project-links">
                             <button class="btn btn-sm btn-primary project-expand"
@@ -400,34 +408,41 @@
             </div>
         </div>
 
-        <!-- Doorbell Modal -->
+        <!-- Doorcam Modal -->
         <div class="modal" id="modal-doorbell" role="dialog" aria-modal="true" aria-labelledby="modal-doorbell-title">
             <button class="modal-close" aria-label="Close modal">&times;</button>
             <div class="modal-content">
                 <div class="modal-gallery">
-                    <div class="image-placeholder">
-                        <span class="placeholder-text">Doorbell photo</span>
-                    </div>
-                    <div class="image-placeholder">
-                        <span class="placeholder-text">Circuit diagram</span>
-                    </div>
+                    <img src="images/doorcam-backend.png" class="gallery-img"
+                        alt="Smart Doorcam backend Docker containers and API logs" loading="lazy">
                 </div>
                 <div class="modal-details">
-                    <h2 id="modal-doorbell-title">Raspberry Pi Smart Doorbell</h2>
+                    <h2 id="modal-doorbell-title">Smart Doorcam</h2>
                     <span class="project-badge project-badge--large">In Progress</span>
                     <div class="modal-section">
                         <h4>Concept</h4>
-                        <p>A smart doorbell system using Raspberry Pi with camera, motion detection, mobile
-                            notifications, and two-way audio communication.</p>
+                        <p>A smart security camera system using Raspberry Pi with live video streaming,
+                            snapshot capture, and two-way audio communication.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h4>My Role</h4>
+                        <p>Sole developer — designed backend architecture, camera integration, and container
+                            orchestration.</p>
                     </div>
                     <div class="modal-section">
                         <h4>Tech Stack</h4>
-                        <p>Raspberry Pi, Python, Camera Module, Push Notifications</p>
+                        <p>Raspberry Pi, Python, FastAPI, PostgreSQL, Docker, OpenCV, ngrok, Audio Stream Controls</p>
+                    </div>
+                    <div class="modal-section">
+                        <h4>Architecture</h4>
+                        <p>Pi client captures video with OpenCV and streams to a Dockerized backend. FastAPI handles
+                            event logging to PostgreSQL and snapshot storage to MinIO. ngrok exposes the API externally.
+                        </p>
                     </div>
                     <div class="modal-section">
                         <h4>Status / Next Steps</h4>
-                        <p>Currently in development. Next: complete hardware assembly and implement notification system.
-                        </p>
+                        <p>Backend functional with event logging and snapshot uploads. Next: implement mobile app
+                            notifications and complete two-way audio integration.</p>
                     </div>
                 </div>
             </div>
